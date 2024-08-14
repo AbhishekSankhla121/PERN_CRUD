@@ -6,7 +6,7 @@ const imgConfig = diskStorage({
         callback(null, "./temp");
     },
     filename: (req, file, callback) => {
-        callback: (null, v4() + Date.now + file.originalname)
+        callback(null, v4() + Date.now + file.originalname)
     }
 });
 
